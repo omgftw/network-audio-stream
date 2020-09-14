@@ -17,8 +17,8 @@ if __name__ == '__main__':
     sd.default.samplerate = sample_rate
     sd.default.channels = 2
 
-    with socket.socket() as client_socket:
-        while True:
+    while True:
+        with socket.socket() as client_socket:
             print('Connecting to {}:{}...'.format(HOST, PORT))
             client_socket.connect((HOST, PORT))
             print('Connected')
